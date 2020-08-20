@@ -11,6 +11,9 @@ new Vue({
     isLoading: false,
   },
   methods: {
+    backHome() {
+      window.location = '/';
+    }
   },
 	created() {
     const id = location.search.split('=')[1]
