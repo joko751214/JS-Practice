@@ -1,9 +1,12 @@
+Vue.component('loading', VueLoading);
+
 new Vue({
 	el: '#app',
 	data: {
 		items: '',
 		api: 'https://challenge.thef2e.com/api/thef2e2019/stage6/rooms',
-		token: 'DtHjqoiqtNh5HT4lBm7ydoxmXcSrYLFGTxewL2uzuJOP9FC3CdyCrapIzC73',
+    token: 'DtHjqoiqtNh5HT4lBm7ydoxmXcSrYLFGTxewL2uzuJOP9FC3CdyCrapIzC73',
+    isLoading: false,
   },
   methods: {
     transform(id) {
@@ -14,6 +17,7 @@ new Vue({
     },
   },
 	created() {
+    this.isLoading = true;
 		axios.get(this.api, {
 			headers: {
 				'Authorization': `Bearer ${this.token}`
@@ -21,7 +25,8 @@ new Vue({
 		})
 			.then((res) => {
       console.log(res);
-			this.items = res.data.items;
+      this.items = res.data.items;
+      this.isLoading = false;
 		})
 	}
 })
