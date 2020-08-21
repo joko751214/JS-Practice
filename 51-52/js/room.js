@@ -12,7 +12,7 @@ new Vue({
   },
   methods: {
     backHome() {
-      window.location = '/index.html';
+      window.location = '/';
     }
   },
 	created() {
