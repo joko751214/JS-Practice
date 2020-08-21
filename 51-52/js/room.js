@@ -12,7 +12,7 @@ new Vue({
   },
   methods: {
     backHome() {
-      window.location = '/';
+      window.location = '/JS-Practice/51-52/';
     }
   },
 	created() {
