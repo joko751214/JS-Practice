@@ -12,7 +12,7 @@
 <body>
   <div id="app">
     <loading :active.sync="isLoading"></loading>
-    <div class="container">
+    <div class="container" v-cloak>
       <div class="row justify-content-center">
         <div class="col-md-8" v-if="status">
           <div class='row justify-content-between align-items-center'>
