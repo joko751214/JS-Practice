@@ -1,0 +1,23 @@
+.card-img-top {
+  width: 288px;
+  height: 200px;
+}
+.card-img-top img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+.carousel-inner > .carousel-item {
+  height:300px;
+}
+.service {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #EBF3FF;
+}
+.text-opacity {
+  opacity: 0.2;
+}
+.btn {
+  background-color: #dddddd;
+}
