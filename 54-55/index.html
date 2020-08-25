@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>第 52 關 POST API 練習</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-loading-overlay@3.3.2/dist/vue-loading.css"/>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <loading :active.sync="isLoading"></loading>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mt-5" v-for="item in items">
+        <div class="card" style="width: 18rem;">
+          <div class="card-img-top">
+            <a href="#" @click.prevent="transform(item.id)">
+              <img :src="item.imageUrl" alt=""/>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text text-right">假日售價: {{item.holidayPrice}}</p>
+            <p class="card-text text-right">平日售價: {{item.normalDayPrice}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js'></script>
+<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-loading-overlay@3.3.2/dist/vue-loading.min.js"></script>
+<script  src="./js/script.js"></script>
+
+</body>
+</html>
